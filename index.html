@@ -3,86 +3,186 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Store</title>
+  <title>KicksVault | Premium Footwear & Streetwear</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    :root {
+      --primary: #111111;
+      --accent: #ff3e3e;
+      --bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --text: #222222;
+      --text-muted: #666666;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
     }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
     header {
-      background-color: #111;
-      color: #fff;
-      padding: 20px;
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 60px 20px;
       text-align: center;
+      border-bottom: 4px solid var(--accent);
     }
+
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #cccccc;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
     .container {
-      max-width: 1000px;
-      margin: 40px auto;
+      max-width: 1100px;
+      margin: 50px auto;
       padding: 0 20px;
     }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
+
     .card {
-      background: #fff;
-      border-radius: 8px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-content {
       padding: 20px;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-    .card img {
-      max-width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
+
     .card h3 {
-      margin: 15px 0 10px;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
     }
-    .card p {
+
+    .price {
+      font-size: 1.4rem;
       font-weight: bold;
-      color: #2b8a3e;
-      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 15px;
     }
+
     .btn {
       display: inline-block;
-      background-color: #007bff;
-      color: white;
-      padding: 10px 20px;
+      width: 100%;
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 12px 0;
       text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background-color 0.2s ease;
     }
+
     .btn:hover {
-      background-color: #0056b3;
+      background-color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: var(--primary);
+      color: var(--text-muted);
+      margin-top: 60px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Welcome to My Store</h1>
-    <p>Find the best deals online</p>
+    <h1>KicksVault</h1>
+    <p>Exclusive Sneakers & Streetwear Delivered Straight to Your Door</p>
   </header>
 
   <div class="container">
-    <h2>Featured Products</h2>
+    <h2 class="section-title">Trending Drops</h2>
     <div class="grid">
-      <!-- Product Item 1 -->
+
+      <!-- Product 1 -->
       <div class="card">
-        <img src="https://via.placeholder.com/300" alt="Product Image">
-        <h3>Sample Product</h3>
-        <p>$29.99</p>
-        <a href="#" class="btn">Buy Now</a>
+        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80" alt="Retro Runner Sneaker">
+        <div class="card-content">
+          <h3>Air Vault Retro</h3>
+          <div class="price">$129.99</div>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
       </div>
+
+      <!-- Product 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80" alt="Street High-Top Sneaker">
+        <div class="card-content">
+          <h3>High-Top Street Spec</h3>
+          <div class="price">$149.99</div>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&q=80" alt="Minimalist White Sneaker">
+        <div class="card-content">
+          <h3>Minimalist Classic</h3>
+          <div class="price">$99.99</div>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+      </div>
+
     </div>
   </div>
+
+  <footer>
+    <p>&copy; 2026 KicksVault. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
